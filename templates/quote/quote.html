@@ -6,6 +6,7 @@
 
 {% block content %}
 {% include 'staples/breadcrumbs.html' %}
+{% include 'staples/messages.html' %}
     <!-- ======= Get Started Section ======= -->
     <section id="get-started" class="get-started section-bg">
         <div class="container">
@@ -22,7 +23,7 @@
             </div>
   
             <div class="col-lg-5" data-aos="fade">
-              <form action="{% url 'quote'%}" method="POST" class="">
+              <form action="{% url 'quote'%}" method="POST" id="quoteForm">
                 {% csrf_token %}
                 
                 <h3>Get a quote</h3>
@@ -49,9 +50,7 @@
                   </div>
   
                   <div class="col-md-12 text-center">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your quote request has been sent successfully. Thank you!</div>
+                    
   
                     <button type="submit">Get a quote</button>
                   </div>
@@ -64,5 +63,8 @@
   
         </div>
       </section><!-- End Get Started Section -->
-
+      <script>
+        $("#quoteForm").on('submit', function(event) {
+              alert("New Dog Added");
+      </script>
 {% endblock %}

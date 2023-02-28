@@ -4,7 +4,7 @@ from .models import Quote
 
 class QuoteForm(forms.ModelForm):
     class Meta:
-        models=Quote
+        model=Quote
         fields=[
             "first_name",
             "last_name",
