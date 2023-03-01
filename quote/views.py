@@ -22,18 +22,7 @@ def quote(request):
             data.save()
             messages.success(request, 'Contact request submitted successfully.')
 
-            #receive the email
-            first_name=request.POST['first_name']
-            last_name=request.POST['last_name']
-            email=request.POST['email']
-            message=request.POST['message']
-
-            send_mail(
-                'Message from ' + first_name,
-                message,
-                email,
-                ['josuegallardolara1@gmail.com'],
-            )
+            
         else:
             messages.error(request, 'Invalid form submission.')
 
