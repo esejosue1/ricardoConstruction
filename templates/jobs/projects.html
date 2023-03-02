@@ -6,6 +6,7 @@
 {% include 'staples/breadcrumbs.html' %}
 {% include 'staples/messages.html' %}
 
+
     <!-- ======= Our Projects Section ======= -->
     <section id="projects" class="projects">
       <div class="container" data-aos="fade-up">
@@ -14,10 +15,9 @@
 
           <ul class="portfolio-flters" data-aos="fade-up" data-aos-delay="100">
             <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-remodeling">Remodeling</li>
-            <li data-filter=".filter-construction">Construction</li>
-            <li data-filter=".filter-repairs">Repairs</li>
-            <li data-filter=".filter-design">Design</li>
+            {% for category in links %}
+            <li data-filter=".filter-{{category.job_category|lower}}">{{category.job_category|lower}}</li>
+            {% endfor %}
           </ul><!-- End Projects Filters -->
 
           <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
@@ -28,7 +28,7 @@
                 <div class="portfolio-info">
                   <h4>{{job.project_title}}</h4>
                   <p>{{job.project_description}}</p>
-                  <a href="assets/img/projects/remodeling-1.jpg" title="Remodeling 1" data-gallery="portfolio-gallery-remodeling" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="{{job.project_img.url}}" title="{{job.project_title}}" data-gallery="portfolio-gallery-remodeling" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
@@ -45,12 +45,6 @@
                 </div>
               </div>
             </div><!-- End Projects Item -->
-
-            
-
-            
-
-            
 
           </div><!-- End Projects Container -->
 
