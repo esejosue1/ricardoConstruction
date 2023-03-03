@@ -4,6 +4,8 @@ from django.db import models
 class Employees(models.Model):
     first_name=models.CharField(max_length=10)
     last_name=models.CharField(max_length=10)
+    chief=models.BooleanField(default=False)
+    manager=models.BooleanField(default=False)
     title=models.CharField(max_length=50)
     image=models.ImageField(upload_to='img/team')
     description=models.CharField(max_length= 250)

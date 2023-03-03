@@ -5,8 +5,10 @@ from .models import Employees
 # Create your views here.
 def story(request):
     employees=Employees.objects.all()
+    titleOwner=Employees.objects.all().filter(chief=True)
 
     context={
-        'employees':employees
+        'employees':employees,
+        'titleOwner':titleOwner
     }
     return render(request, 'story/about.html', context)

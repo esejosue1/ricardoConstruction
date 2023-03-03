@@ -12,8 +12,13 @@
       <div class="container" data-aos="fade-up">
 
         <div class="row position-relative">
-
+          {% if chief %}
+          <div class="col-lg-7 about-img" style="background-image: url({{chief.image.url}});"></div>
+          {% else %}
+          
           <div class="col-lg-7 about-img" style="background-image: url(/static/assets/img/about.jpg);"></div>
+
+          {% endif %}
 
           <div class="col-lg-7">
             <h2>Consequatur eius et magnam</h2>
@@ -121,8 +126,6 @@
             </div>
           </div><!-- End Team Member -->
           {% endfor %}
-
-         
 
         </div>
 
