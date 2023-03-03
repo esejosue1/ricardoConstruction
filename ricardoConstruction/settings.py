@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'projects',
     'category',
     'aboutme',
+    'services',
 ]
 
 MIDDLEWARE = [

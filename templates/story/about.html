@@ -12,12 +12,10 @@
       <div class="container" data-aos="fade-up">
 
         <div class="row position-relative">
-          {% if chief %}
-          <div class="col-lg-7 about-img" style="background-image: url({{chief.image.url}});"></div>
+          {% if titleOwner %}
+          <div class="col-lg-7 about-img" style="background-image: url({{titleOwner.image.url}});"></div>
           {% else %}
-          
           <div class="col-lg-7 about-img" style="background-image: url(/static/assets/img/about.jpg);"></div>
-
           {% endif %}
 
           <div class="col-lg-7">

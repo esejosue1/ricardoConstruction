@@ -19,7 +19,7 @@
           {% url 'aboutme' as url %}
           <li><a href="{% url 'aboutme'%}" class="{% if request.path == url %}active{% endif %}">About</a></li>
           {% url 'services' as url %}
-          <li><a href="services.html" class="{% if request.path == url %}active{% endif %}">Services</a></li>
+          <li><a href="{% url 'services'%}" class="{% if request.path == url %}active{% endif %}">Services</a></li>
           {% url 'projects' as url %}
           <li><a href="{% url 'projects'%}" class="{% if request.path == url %}active{% endif %}">Projects</a></li>
 
