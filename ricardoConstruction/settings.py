@@ -59,6 +59,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'category.context_processor.category_links',
                 'projects.context_processor.globalProjects',
+                'services.context_processor.service_links',
                 
             ],
         },

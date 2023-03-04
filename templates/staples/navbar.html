@@ -22,8 +22,8 @@
           <li><a href="{% url 'services'%}" class="{% if request.path == url %}active{% endif %}">Services</a></li>
           {% url 'projects' as url %}
           <li><a href="{% url 'projects'%}" class="{% if request.path == url %}active{% endif %}">Projects</a></li>
-
-          <li><a href="contact.html">Contact</a></li>
+          {% url 'contact' as url %}
+          <li><a href="{% url 'contact'%}">Contact</a></li>
         </ul>
       </nav><!-- .navbar -->
 

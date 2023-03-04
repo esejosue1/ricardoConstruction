@@ -5,6 +5,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.quote, name='quote'),
+    path('', views.contact, name='contact'),
+    
     
 ]

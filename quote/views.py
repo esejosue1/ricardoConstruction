@@ -28,6 +28,9 @@ def quote(request):
 
     return render(request, "quote/quote.html")
 
+def contact(request):
+    return render(request, 'quote/contact.html')
+
 def getQuote(request):
     if request.method == "POST":
         form=QuoteForm(request.POST)
