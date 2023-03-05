@@ -11,3 +11,7 @@ def services(request):
     }
 
     return render(request, "services/services.html", context)
+
+
+def serviceDetail(request):
+    return render(request, 'services/service-details.html')
