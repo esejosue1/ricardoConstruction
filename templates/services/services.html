@@ -15,9 +15,9 @@
             <div class="service-item  position-relative">
               <img src="{{service.image.url}}" class="img-fluid" alt="">
               <div style="text-align:center">
-                <h3>{{service.type_of_service}}</h3>
+                <h3>{{service.title}}</h3>
               <p>{{service.introduction}}</p>
-              <a href="{% url 'serviceDetail' %}" class="readmore stretched-link">View Details <i class="bi bi-arrow-right"></i></a>
+              <a href="{{service.get_url}}" class="readmore stretched-link">View Details <i class="bi bi-arrow-right"></i></a>
             </div>
             </div>
           </div><!-- End Service Item -->
