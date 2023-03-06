@@ -22,6 +22,6 @@ def serviceDetail(request, slug_detail):
         return HttpResponse("<h1>Page not found </h1>")
     
     context={
-        'services':q
+        'service_detail':q
     }
     return render(request, 'services/service-details.html', context)
